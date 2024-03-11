@@ -141,20 +141,7 @@ def define_G(args, init_type='normal', init_gain=0.02, gpu_ids=[]):
     elif args.net_G == 'base_transformer_pos_s4_dd8_dedim8':
         net = BASE_Transformer(input_nc=3, output_nc=2, token_len=4, resnet_stages_num=4,
                                with_pos='learned', enc_depth=1, dec_depth=8, decoder_dim_head=8)
-    # elif args.net_G == "MITCD_V1":
-    #     net = MIT_CD_v1()
-    # elif args.net_G == "TIPCD_V1":
-    #     net = MIT_CD_v2()
-    # elif args.net_G == "TIPCD_V2":
-    #     net = MIT_CD_v3()
-    elif args.net_G == "TIPCD_V3":
-        net = MIT_CD_v4()
-    elif args.net_G == 'TIPCD_V5':
-        net = MIT_CD_v5()
-    elif args.net_G == 'FTRNet_V1':
-        net = FTRNet_V1()
-    elif args.net_G == 'FTRNet_V2':
-        net = FTRNet_V2()
+
     elif args.net_G == 'FTRNet_V4':
         net = FTRNet_V4()
     elif args.net_G == 'FSRNet':
